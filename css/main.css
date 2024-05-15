@@ -5192,17 +5192,41 @@ Created using IcoMoon - icomoon.io
 /* Professional Skills Style */
 .progress-container {
   margin-bottom: 20px;
-  font-size: 18px; }
-  .progress-container .progress-bar {
-    height: 5px;
-    transform: scaleX(0);
-    transition: transform 2s ease-in-out;
-    transform-origin: 0% 0%; }
-  .progress-container .progress {
-    height: 5px;
-    font-size: 18px; }
-  .progress-container .aos-animate {
-    transform: scaleX(1); }
+  font-size: 18px;
+}
+
+.progress-container .progress {
+  position: relative;
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-container .progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 2s ease-in-out;
+  transform-origin: 0% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.progress-container .progress-bar .progress-value {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.progress-container .aos-animate {
+  transform: scaleX(1);
+}
+
 
 /* Experience Style */
 .cc-experience .cc-experience-header {
