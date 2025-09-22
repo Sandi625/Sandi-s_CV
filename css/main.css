@@ -5187,33 +5187,35 @@ Created using IcoMoon - icomoon.io
 
 /* Profile Page Social button Style */
 .button-container .btn-default {
-  margin-right: 8px; }
+  margin-right: 8px;
+}
 
-/* Professional Skills Style */
+/* sudah dari kamu */
 .progress-container {
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .progress-container .progress {
   position: relative;
-  height: 20px;
+  height: 22px;
   background-color: #e9ecef;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .progress-container .progress-bar {
   height: 100%;
-  background-color: #007bff;
-  transform: scaleX(0);
-  transition: transform 2s ease-in-out;
-  transform-origin: 0% 0%;
+  width: 0; /* mulai dari 0 */
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  background-size: 200% 100%;
+  transition: width 2s ease-in-out;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  animation: gradientMove 3s linear infinite;
 }
 
 .progress-container .progress-bar .progress-value {
@@ -5221,11 +5223,18 @@ Created using IcoMoon - icomoon.io
   right: 10px;
   color: #fff;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .progress-container .aos-animate {
-  transform: scaleX(1);
+  width: var(--progress-width);
 }
+
+@keyframes gradientMove {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 
 
 /* Experience Style */
